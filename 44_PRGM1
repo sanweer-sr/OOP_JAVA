@@ -1,0 +1,43 @@
+
+-- 
+-- Roll No: 44
+-- Name: MUHAMMED SANWEER K T
+-- Program: Program Questions - 1
+-- 
+
+
+--
+-- Table structure for table department
+--
+create table department(dno int , dname varchar(50) not null, location varchar(50) default 'MAIN BLOCK', constraint DNO_PRIMARYKEY primary key(dno), constraint DEPT_NAME_UNIQUE unique(dname));
+
+
+--
+-- Table structure for table employee
+--
+
+create table employee(empno int , name varchar(50) not null, gender varchar(1), salary decimal(7,2), email varchar(100), constraint EMPNO_PRIMARYKEY primary key(empno), constraint EMAIL_UNIQUE unique(email),constraint SALARY_GREATERTHAN_0 check(salary>0));
+
+
+--
+-- Alter Table structure 
+--
+
+
+alter table employee add phone int(10);
+
+alter table employee modify name varchar(100);
+
+alter table employee add constraint phone_no_unique unique(phone);
+
+alter table employee add constraint SALARY_GREATERTHAN_10000OR_EQUAL check(salary>=10000);
+
+alter table employee drop column email;
+
+alter table employee add constraint NAME_OR_PHONENUM_UNIQUE unique(name,phone);
+
+alter table employee rename column name to ename;
+
+alter table department rename to dept;
+
+
