@@ -16,7 +16,7 @@ create table department(dno int , dname varchar(50) not null, location varchar(5
 -- Table structure for table employee
 --
 
-create table employee(empno int , name varchar(50) not null, gender varchar(1), salary decimal(7,2), email varchar(100), constraint EMPNO_PRIMARYKEY primary key(empno), constraint EMAIL_UNIQUE unique(email),constraint SALARY_GREATERTHAN_0 check(salary>0));
+create table employee(empno int , name varchar(50) not null, gender char(1), salary decimal(7,2), email varchar(100), constraint EMPNO_PRIMARYKEY primary key(empno), constraint EMAIL_UNIQUE unique(email),constraint SALARY_GREATERTHAN_0 check(salary>0));
 
 
 --
